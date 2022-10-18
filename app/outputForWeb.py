@@ -9,4 +9,4 @@ def getUserTime(worklogAuthor):
     allWorklogsTime = getTimeForUser(worklogAuthor, allIDs)
     pocetHodin = str((sum(allWorklogsTime)/60))
     pocetDni = str((sum(allWorklogsTime)/60/8))
-    return pocetHodin, pocetDni, allIDs
+    return pocetHodin, pocetDni, allIDs, allWorklogsTime 

@@ -14,9 +14,9 @@ def answer():
     if request.method == 'POST':
         form_data = request.form
         form_data_str = str(form_data["form_1"])
-        
         UserOutput = getUserTime(form_data_str)
-        return render_template("table.html", pocetHodin=UserOutput[0], pocetDni=UserOutput[1], allIDs = UserOutput[2])
+        diskOfIdTimedict = zip(UserOutput[2], UserOutput[3])
+        return render_template("table.html", pocetHodin=UserOutput[0], pocetDni=UserOutput[1], diskOfIdTimedict = diskOfIdTimedict)
     else:
         return render_template("table.html")
 

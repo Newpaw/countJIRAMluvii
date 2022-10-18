@@ -15,12 +15,29 @@
         <p><input type = "submit" value = "submit" /></p>
     </form>
 
-    <p>{{pocetHodin}} hodin neboli {{pocetDni}} dní</p>
+    <p>SUM {{pocetHodin}} hours or {{pocetDni}} days</p>
 
-    {%for i in allIDs %}
-    <p>{{i}}</p>
-    {%endfor%}
+    
 
+    <table id="myTable" class="table">
+      <tr class="table__header">
+         
+         <th class="table__cell">Task ID</th>
+         <th class="table__cell">Time in min</th>
+         
+      </tr>
+      {% for id, time in diskOfIdTimedict %}
+      <tr class="table__row">
+        
+          <td class="table__cell">{{id}}</td>
+          <td class="table__cell">{{time}}</td> 
+      </tr>
+      {% endfor %}
+      
+
+      
+
+  </table>
 
     
 
