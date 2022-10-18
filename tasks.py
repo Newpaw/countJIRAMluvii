@@ -1,4 +1,3 @@
-
 import requests
 from requests.auth import HTTPBasicAuth
 import json
@@ -9,7 +8,7 @@ def getTimeForUser(worklogAuthor, issues):
     issues = issues
     allWorklogs = []
     for issue in issues:
-        api_token = "G43BDQrWeQ0IBGhJufzI9A33"
+        api_token = "k9Tq94tmbg5emSHOOft1320C"
         url = f"https://mluvii.atlassian.net/rest/api/3/issue/{issue}"
 
         auth = HTTPBasicAuth("jan.novopacky@icord.cz", f"{api_token}")

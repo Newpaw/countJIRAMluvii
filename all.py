@@ -4,7 +4,7 @@ import json
 
 
 def getUserTaskIDs(worklogAuthor):
-   api_token = "G43BDQrWeQ0IBGhJufzI9A33"
+   api_token = "k9Tq94tmbg5emSHOOft1320C"
    auth = HTTPBasicAuth("jan.novopacky@icord.cz", f"{api_token}")
    worklogAuthor = worklogAuthor
 
@@ -25,7 +25,7 @@ def getUserTaskIDs(worklogAuthor):
       params=query,
       auth=auth
    )
-
+   
    #print(response.text)
    #print(json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": ")))
 
