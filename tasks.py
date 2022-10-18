@@ -1,14 +1,15 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import json
-
+import yaml
 
 def getTimeForUser(worklogAuthor, issues):
     worklogAuthor = worklogAuthor
     issues = issues
     allWorklogs = []
+    with open("config.yml", "r") as ymlfile:
+        api_token = yaml.safe_load(ymlfile)["access"]["api_token"]
     for issue in issues:
-        api_token = "k9Tq94tmbg5emSHOOft1320C"
         url = f"https://mluvii.atlassian.net/rest/api/3/issue/{issue}"
 
         auth = HTTPBasicAuth("jan.novopacky@icord.cz", f"{api_token}")

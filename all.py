@@ -1,10 +1,15 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import json
+import yaml
+
+
 
 
 def getUserTaskIDs(worklogAuthor):
-   api_token = "k9Tq94tmbg5emSHOOft1320C"
+   with open("config.yml", "r") as ymlfile:
+      api_token = yaml.safe_load(ymlfile)["access"]["api_token"]
+      
    auth = HTTPBasicAuth("jan.novopacky@icord.cz", f"{api_token}")
    worklogAuthor = worklogAuthor
 
