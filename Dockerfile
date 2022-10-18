@@ -5,4 +5,4 @@ RUN pip3 install -r requirements.txt
 COPY . /app
 WORKDIR /app
 RUN chmod +x ./gunicorn.sh
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+ENTRYPOINT ["./gunicorn.sh"]
